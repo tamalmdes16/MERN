@@ -2,8 +2,20 @@
 <html>
     <head>
         <title>Simple Form</title>
-        <link rel="stylesheet" href="style.css"
+        <link rel="stylesheet" href="style.css">
+        
+        <script>
+            function passvalues() 
+            {
+                var firstname= document.getElementById("txt").value;
+                localstorage.setitem("textvalue",firstname);
+                return false;
+            }
+            
+        </script>
     </head>
+
+
     <body bgcolor="f8f8f8">
         
     <div class= "formstyle">
@@ -12,25 +24,25 @@
             <img src="https://image.flaticon.com/icons/png/512/40/40263.png" width= 80px>
             <h1 class="h1style">Login</h1></center>
         
-        <form method="GET" action="display.html">
+        <form action="display.html">
         
         <div class= "divstyle">
             <label class="labelstyle" for="NAME">Name</label>
-            <input class= "inputstyle" type="text">
+            <input class= "inputstyle" type="text" id="txt">
         </div>
 
         <div class= "divstyle">
             <label class="labelstyle" for="AGE">Age</label>
-            <input class= "inputstyle" type="number">
+            <input class= "inputstyle" type="number" id="age">
         </div>
 
         <div class= "divstyle">
             <label class="labelstyle" for="NATIONALITY">Nationality</label>
-            <input class= "inputstyle" type="text">
+            <input class= "inputstyle" type="text" id="nationality">
         </div>
 
         <div>
-            <button class= "buttonstyle">SUBMIT</button>
+            <button class= "buttonstyle" onclick="passvalues()">SUBMIT</button>
         </div>
 
 

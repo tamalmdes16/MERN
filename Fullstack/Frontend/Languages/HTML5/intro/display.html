@@ -9,7 +9,11 @@
     <center> 
     <div class= "vcenter">
     <img src="https://image.freepik.com/free-photo/excited-surprised-man-raising-hands-up-hear-amazing-news-happy-you-congratulating_176420-26315.jpg" width= 240px class="imgstyle">     
-    <h1 class="h1style">Thank You! </h1> 
+    
+    <h1 class="h1style">Thank You <span id="result"></span>! </h1>
+    <script>
+        document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+    </script> 
     </div>
     </center>    
     </body>
